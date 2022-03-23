@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dylanireland/rpc-workshop-1.git"
+    "url": "git+https://github.com/casper-ecosystem/rpc-workshop-1.git"
   },
   "author": "Dylan Ireland",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dylanireland/rpc-workshop-1/issues"
+    "url": "https://github.com/casper-ecosystem/rpc-workshop-1/issues"
   },
-  "homepage": "https://github.com/dylanireland/rpc-workshop-1#readme",
+  "homepage": "https://github.com/casper-ecosystem/rpc-workshop-1#readme",
   "dependencies": {
     "casper-js-sdk": "^2.9.1",
     "cors": "^2.8.5",
