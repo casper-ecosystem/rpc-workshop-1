@@ -3,13 +3,22 @@ var cors = require('cors')
 const { RuntimeArgs, CLValueBuilder, Contracts, CasperClient, DeployUtil, CLPublicKey } = require('casper-js-sdk')
 const app = express();
 const port = 3000;
+
 const client = new CasperClient("http://3.208.91.63:7777/rpc");
 const contract = new Contracts.Contract(client);
 contract.setContractHash("hash-75143aa704675b7dead20ac2ee06c1c3eccff4ffcf1eb9aebb8cce7c35648041");
 
+//END Importing and Setting up Client and Contract Instances
+
 app.use(express.static(__dirname + '/public/static'));
 app.use(cors());
 app.use(express.json());
+
+//END Middleware
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`)
+});
 
 app.get('/', (req, res) => {
   res.sendFile('public/index.html', {root: __dirname });
@@ -24,10 +33,6 @@ app.post('/sendDeploy', (req, res) => {
     console.log(error);
     return;
   });
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`)
 });
 
 app.get("/getDeploy", (req, res) => {

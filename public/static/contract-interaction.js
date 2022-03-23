@@ -126,11 +126,6 @@ async function getHighscore(pubkey) {
   });
 }
 
-function setHighscore(score) { //Update the label and highscore variable
-  document.getElementById("highscore").textContent = "Highscore: " + score.toString();
-  highscore = score;
-}
-
 async function buttonPressed() {
   const isConnected = await Signer.isConnected();
   if (isConnected) {
