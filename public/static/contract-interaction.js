@@ -52,7 +52,7 @@ function sendDeploy(signedDeployJSON) {
     }
   }).then((response) => {
     const hash = response.data;
-    updateStatus("Deployed. <a href='https://testnet.cspr.live/deploy/" + hash + "'>View on cspr.live</a>");
+    updateStatus("Deployed. <a target='_blank' href='https://testnet.cspr.live/deploy/" + hash + "'>View on cspr.live</a>");
     initiateGetDeployProcedure(hash);
   }).catch((error) => {
     alert(error);
