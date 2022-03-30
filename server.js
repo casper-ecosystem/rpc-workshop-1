@@ -2,7 +2,7 @@ const express = require('express')
 var cors = require('cors')
 const { RuntimeArgs, CLValueBuilder, Contracts, CasperClient, DeployUtil, CLPublicKey } = require('casper-js-sdk')
 const app = express();
-const port = 3500;
+const port = 3000;
 
 const client = new CasperClient("http://3.208.91.63:7777/rpc");
 const contract = new Contracts.Contract(client);
