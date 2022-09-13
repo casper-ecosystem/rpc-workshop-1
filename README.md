@@ -8,3 +8,6 @@ cd rpc-workshop-1
 npm install
 node server.js
 ```
+
+## Follow Along
+Watch the video [here](https://www.youtube.com/watch?v=DLI889UqLg4).
